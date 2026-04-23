@@ -1,156 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <!-- TikTok Pixel Code Start -->
+   <!-- TikTok Pixel - ViewContent -->
 <script>
 !function (w, d, t) {
-  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
-var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
-;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
-
-
-  ttq.load('D7K3J73C77U0UANUQRCG');
-  ttq.page();
+  w.TiktokAnalyticsObject=t;
+  var tt=w[t]=w[t]||[];
+  tt.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"];
+  tt.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};
+  for(var i=0;i<tt.methods.length;i++)tt.setAndDefer(tt,tt.methods[i]);
+  tt.load=function(e,n){
+    var i="https://analytics.tiktok.com/i18n/pixel/events.js";
+    tt._i=tt._i||{},tt._i[e]=[],tt._i[e]._u=i,tt._t=tt._t||{},tt._t[e]=+new Date,tt._o=tt._o||{},tt._o[e]=n||{};
+    var o=d.createElement("script");
+    o.type="text/javascript";o.async=!0;o.src=i+"?sdkid="+e+"&lib="+t;
+    var a=d.getElementsByTagName("script")[0];
+    a.parentNode.insertBefore(o,a)
+  };
 }(window, document, 'ttq');
+
+ttq.load('D7K3J73C77U0UANUQRCG');
+ttq.page(); // carrega a página
+
+// Evento ViewContent
+ttq.track('ViewContent');
 </script>
-<!-- TikTok Pixel Code End -->
 <meta charset="UTF-8">
+<title>Video – Apresentacion</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MARKETING4ALL LLC</title>
+
+<!-- ⭐ VTURB FIX – CONFIGURAÇÃO GLOBAL (ANTES DO PLAYER) -->
+<script>
+  window.smartplayer = window.smartplayer || {};
+  window.smartplayer.config = {
+    autoplay: true,
+    muted: false,        // 🔊 força áudio
+    volume: 1,
+    controls: true,
+    captions: false,     // ❌ desativa legendas
+    subtitles: false,
+    loop: false
+  };
+</script>
+
+<!-- Preload SmartPlayer -->
+<link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer/v1/smartplayer.min.js" as="script">
+<link rel="preload" href="https://scripts.converteai.net/6c54b338-590a-4626-8985-8e16eac2e98d/players/695dad2623fc590cf35bbad4/v4/player.js" as="script">
 
 <style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #f5f7fa;
-        color: #333;
-    }
+body {
+  margin: 0;
+  background: #000;
+  font-family: Arial, sans-serif;
+}
 
-    header {
-        background-color: #0a2540;
-        color: white;
-        padding: 25px;
-        text-align: center;
-    }
-
-    header h1 {
-        margin: 0;
-        font-size: 30px;
-    }
-
-    header p {
-        margin-top: 6px;
-        font-size: 14px;
-        opacity: 0.85;
-    }
-
-    .container {
-        max-width: 900px;
-        margin: 40px auto;
-        padding: 25px;
-        background: white;
-        border-radius: 10px;
-        box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-    }
-
-    h2 {
-        border-bottom: 2px solid #eee;
-        padding-bottom: 8px;
-        margin-top: 30px;
-        font-size: 20px;
-    }
-
-    p {
-        line-height: 1.7;
-        font-size: 15px;
-    }
-
-    .info {
-        margin: 12px 0;
-    }
-
-    .info strong {
-        display: inline-block;
-        width: 230px;
-        color: #0a2540;
-    }
-
-    footer {
-        text-align: center;
-        padding: 20px;
-        font-size: 13px;
-        color: #777;
-    }
+/* Viewer fake */
+.viewers-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+  color: #fff;
+  font-weight: bold;
+}
+.live-dot {
+  width: 10px;
+  height: 10px;
+  background: #00ff52;
+  border-radius: 50%;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1 }
+  50% { opacity: .3 }
+  100% { opacity: 1 }
+}
 </style>
-
 </head>
+
 <body>
 
-<header>
-    <h1>MARKETING4ALL LLC</h1>
-    <p>Registered Florida Limited Liability Company</p>
-</header>
+<!-- ⭐ PLAYER VTURB (NOVO VÍDEO) -->
+<vturb-smartplayer
+  id="vid-695dad2623fc590cf35bbad4"
+  style="display:block;margin:0 auto;width:100%;max-width:400px;">
+</vturb-smartplayer>
 
-<div class="container">
+<!-- ⭐ SCRIPT DO PLAYER (v4) -->
+<script type="text/javascript">
+(function(){
+  var s = document.createElement("script");
+  s.src = "https://scripts.converteai.net/6c54b338-590a-4626-8985-8e16eac2e98d/players/695dad2623fc590cf35bbad4/v4/player.js";
+  s.async = true;
+  document.head.appendChild(s);
+})();
+</script>
 
-    <h2>Company Overview</h2>
-    <p>
-        MARKETING4ALL LLC is a Florida-based Limited Liability Company operating in compliance with state regulations.
-        The company provides marketing and digital solutions services, focusing on delivering professional and scalable strategies for clients worldwide.
-    </p>
-
-    <h2>Company Registration Details</h2>
-
-    <div class="info"><strong>Document Number:</strong> L18000231762</div>
-    <div class="info"><strong>FEI/EIN Number:</strong> 85-1619901</div>
-    <div class="info"><strong>Filing Date:</strong> October 1, 2018</div>
-    <div class="info"><strong>Effective Date:</strong> October 1, 2018</div>
-    <div class="info"><strong>State:</strong> Florida (FL)</div>
-    <div class="info"><strong>Status:</strong> Active</div>
-    <div class="info"><strong>Last Event:</strong> Reinstatement</div>
-    <div class="info"><strong>Event Filing Date:</strong> April 6, 2025</div>
-
-    <h2>Business Address</h2>
-    <p>
-        5379 Lyons Rd,<br>
-        Building 909,<br>
-        Coconut Creek, FL 33073,<br>
-        United States
-    </p>
-
-    <h2>Mailing Address</h2>
-    <p>
-        5379 Lyons Rd,<br>
-        Building 909,<br>
-        Coconut Creek, FL 33073,<br>
-        United States
-    </p>
-
-    <h2>Registered Agent</h2>
-    <p>
-        Sean Michael West<br>
-        5379 Lyons Rd, Building 909<br>
-        Coconut Creek, FL 33073, United States
-    </p>
-
-    <h2>Authorized Person</h2>
-    <p>
-        <strong>Position:</strong> Chief Operating Officer (COO)<br>
-        <strong>Name:</strong> Sean Michael West<br>
-        <strong>Address:</strong> 5379 Lyons Rd, Building 909, Coconut Creek, FL 33073
-    </p>
-
-    <h2>Compliance Statement</h2>
-    <p>
-        This website is provided for informational and verification purposes only. 
-        MARKETING4ALL LLC operates in accordance with applicable business regulations and maintains an active status with the State of Florida.
-    </p>
-
+<!-- VIEWERS -->
+<div class="viewers-container">
+  <div class="live-dot"></div>
+  <div id="viewers">742 personas están viendo ahora</div>
 </div>
 
-<footer>
-    © 2026 MARKETING4ALL LLC. All rights reserved.
-</footer>
+<script>
+(function(){
+  let current = 700 + Math.floor(Math.random() * 80);
+  const el = document.getElementById("viewers");
+
+  function update(){
+    current += Math.floor(Math.random() * 15) - 5;
+    if (current < 620) current = 620;
+    if (current > 980) current = 980;
+    el.textContent = current + " personas están viendo ahora";
+    setTimeout(update, 2000 + Math.random() * 3000);
+  }
+  update();
+})();
+</script>
 
 </body>
 </html>
